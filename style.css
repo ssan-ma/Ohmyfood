@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto' sans-serif;
+}
+/*header*/
+header{
+    display: flex;
+    box-shadow: 0px 3px 1px lightgrey;
+    position: relative;
+}
+.logo{
+    margin: auto;
+    margin-top: 7px;
+    width: 53%;
+    padding: 10px; 
+}
+/*ville*/
+.city{
+    display: flex;
+    background-color: #f1eeee;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px;
+    font-size: 50%;
+    font-family: 'Roboto' sans-serif;
+}
+.map{
+    font-size: 17px;
+}
+
+/*Explorer*/
+.Explorer{
+    text-align: center;
+    width: 89%;
+    margin: auto;
+    padding: 10px 5px;
+}
+
+.btn{
+    color: white;
+    background-image: linear-gradient(#FF79DA, #9356DC);
+    border: none;
+    padding: 16px, 32px;
+    border-radius: 32px;
+    box-shadow: 2px 5px 13px -4px #000000;
+}
+
+.working{
+    padding: 12px 28px;
+}
+
+.working h3{
+    font-family: 'Shrikhand' sans-serif;
+}
+
+.working ol{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.working li{
+    background-color: #f6f6f6;
+    padding: 23px 34px;
+    border-radius: 10px;
+    list-style-type: none;
+    box-shadow: 2px 1px 6px -4px #000000;
+}
+
+.mobile {
+    color: grey;
+    margin-right: 15px;
+}
+
+.list{
+    color: grey;
+    margin-right: 15px;
+}
+
+.store{
+    color: grey;
+    margin-right: 15px;
+}
+
+.menus{
+    display: flex;
+    background: #f6f6f6;
+}
+
+.sub-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    padding-bottom: 32px;
+}
+
+.sub-menu .card{
+    height: 100%;
+    box-shadow: 0px 0px 10px 0px #E0E0E0;
+    border-radius: 25px;
+}
+.card .card-image{
+   width: 100%;
+   height: calc(100% - 60px);
+   object-fit: cover;
+   border-radius: 25px 25px 0px 0px;;
+    
+}
+
+footer{
+    background: rgb(56, 54, 54);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+footer, h5{
+    font-family: 'Shrikhand' sans-serif;
+    color: white;
+}
+
+.list{
+    list-style: none;
+    color: white;
+}
