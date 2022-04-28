@@ -41,9 +41,9 @@ header .logo {
 /*Explorer*/
 .Explorer {
   text-align: center;
-  width: 89%;
   margin: auto;
-  padding: 10px 5px;
+  padding: 10px 5px 35px 5px;
+  background: #fafafa;
 }
 
 .btn {
@@ -56,38 +56,38 @@ header .logo {
 }
 
 .working {
-  padding: 12px 28px;
-}
-
-.working h3 {
-  font-family: "Shrikhand" sans-serif;
-}
-.working ol {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
 }
-.working li {
-  background-color: #f6f6f6;
-  padding: 23px 34px;
-  border-radius: 10px;
-  list-style-type: none;
-  box-shadow: 2px 1px 6px -4px #000000;
+.working .container {
+  width: 95%;
+  max-width: 1200px;
+  padding: 0;
 }
-
-.mobile {
-  color: grey;
-  margin-right: 15px;
+.working .working_title {
+  margin: 0;
 }
 
-.list {
-  color: grey;
-  margin-right: 15px;
+.working__step {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: 60px;
+  width: 80%;
+  margin: 20px 25px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
-
-.store {
-  color: grey;
-  margin-right: 15px;
+.working__step .working_number {
+  background-color: #9356DC;
+  color: white;
+  padding: 3px 8px 3px 8px;
+  border-radius: 500px;
+}
+.working__step .working__icon {
+  color: #7E7E7E;
+  margin: 0 20px;
 }
 
 /*restaurants*/
@@ -160,15 +160,19 @@ a {
 /*footer*/
 footer {
   background: #353535;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  padding: 5px 10px;
 }
-footer h5 {
-  font-family: "Shrikhand" sans-serif;
+footer h4 {
+  font-family: "Shrikhand" italic, sans-serif;
+  color: white;
+  font-weight: 500;
+  padding: 5px 0;
+}
+footer p {
+  padding: 4px;
   color: white;
 }
-footer .list {
-  list-style: none;
+footer i {
   color: white;
 }
 
