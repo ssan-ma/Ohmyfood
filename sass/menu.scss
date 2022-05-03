@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -68,7 +71,7 @@ header{
 
 
 .menu-header-title{
-    font-family: 'shrikhand', cursive;
+    font-family: 'shrikhand';
 
 }
 
@@ -83,22 +86,34 @@ header{
         }
     }
 }
-/*footer
-footer{
-    background: #353535;
-    padding: 5px 10px;
 
-    h4{
-        font-family: 'Shrikhand' italic, sans-serif; 
-        color: white;
-        font-weight: 500;
-        padding: 5px 0;
+.menu-grid-case{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    width: 100%;
+    height: 70px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+
+    .dish-and-price{
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
     }
-    p{
-        padding: 4px;
-        color: white;
+    .menu-case-dish{
+        margin-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+}
+    .menu-case-dish-title{
+        font-weight: bold;
+
+        .menu-case-dish-subtitle{
+            font-weight: none;
+        }
     }
-    i{
-        color: white;
-    }
-*/
+
+}
