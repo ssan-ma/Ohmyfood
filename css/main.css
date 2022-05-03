@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Roboto" sans-serif;
 }
 
 body {
@@ -83,7 +85,9 @@ header .logo {
   background-color: #9356DC;
   color: white;
   padding: 3px 8px 3px 8px;
-  border-radius: 500px;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
 }
 .working__step .working__icon {
   color: #7E7E7E;
@@ -163,7 +167,7 @@ footer {
   padding: 5px 10px;
 }
 footer h4 {
-  font-family: "Shrikhand" italic, sans-serif;
+  font-family: "Shrikhand", sans-serif;
   color: white;
   font-weight: 500;
   padding: 5px 0;
