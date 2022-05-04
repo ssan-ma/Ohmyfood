@@ -72,31 +72,32 @@ header .logo {
 }
 
 .menu-grid-case {
-  background-color: white;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  border-radius: 15px;
+  background-color: white;
+  border-radius: 15%;
   width: 100%;
   height: 70px;
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 .menu-grid-case .dish-and-price {
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.menu-grid-case .menu-case-dish {
-  margin-left: 20px;
+.menu-grid-case .dish-and-price-case {
   white-space: nowrap;
-  overflow: hidden;
+  margin-left: 10px;
 }
-.menu-grid-case .menu-case-dish-title {
+
+.dish-and-price-title {
   font-weight: bold;
 }
-.menu-grid-case .menu-case-dish-title .menu-case-dish-subtitle {
-  font-weight: none;
+
+.price {
+  font-weight: bold;
+  padding-left: 90px;
 }
 
 /*# sourceMappingURL=menu.css.map */

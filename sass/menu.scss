@@ -86,34 +86,31 @@ header{
         }
     }
 }
-
 .menu-grid-case{
-    background-color: white;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 15px;
+    background-color: white;
+    border-radius: 15%;
     width: 100%;
     height: 70px;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-
     .dish-and-price{
         width: 100%;
-        align-items: center;
-        justify-content: space-between;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    .menu-case-dish{
-        margin-left: 20px;
+    .dish-and-price-case{
         white-space: nowrap;
-        overflow: hidden;
-}
-    .menu-case-dish-title{
-        font-weight: bold;
-
-        .menu-case-dish-subtitle{
-            font-weight: none;
-        }
+        margin-left: 10px;
     }
+}
 
+.dish-and-price-title{
+    font-weight: bold;
+}
+
+.price{
+    font-weight: bold;
+    padding-left: 90px;
 }
