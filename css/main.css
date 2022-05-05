@@ -11,6 +11,41 @@ body {
   font-family: "Roboto" sans-serif;
 }
 
+/*loaders
+.loader{
+    height: 100%;
+    background: #ffffff;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:2;
+    opacity: 0.9;
+    .loader-quart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 10px solid #9356DC;
+        border-top: 10px solid #FF79DA;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        animation: spin 2s linear infinite;
+    }
+    }
+
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}*/
 /*header*/
 header {
   display: flex;
@@ -57,6 +92,7 @@ header .logo {
   box-shadow: 2px 5px 13px -4px #000000;
 }
 
+/*fonctionnement*/
 .working {
   display: flex;
   justify-content: center;
@@ -103,6 +139,22 @@ header .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.restaurant .new {
+  position: relative;
+}
+.restaurant .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 40px;
+  width: 27%;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 17px;
+  right: 19px;
 }
 
 .restaurant-title {
