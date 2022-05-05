@@ -141,7 +141,7 @@ header{
 .restaurant{
     margin: 0;
     background: #f6f6f6;
-    padding: 20px;
+    padding: 10px;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -173,7 +173,6 @@ header{
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    padding: 20px;
     }
 
 
@@ -221,6 +220,12 @@ a{
 
     .restaurant-block-name{
         font-weight: 700;
+    }
+    .restaurant-block-heart{
+      position: relative;
+      left: 290px;
+      bottom: 25px;
+
     }
 }
 
