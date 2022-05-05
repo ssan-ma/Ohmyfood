@@ -14,11 +14,14 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto' sans-serif;
+    /*margin: 0px;
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto' sans-serif;*/
 }
 /*header*/
 header{
@@ -30,7 +33,11 @@ header{
         margin: auto;
         margin-top: 7px;
         width: 53%;
-        padding: 10px; 
+        padding: 10px;
+        @media screen and (min-width: 800px){
+            width: 18%;
+            padding: 24px; 
+        }
     }
 }
 
@@ -77,40 +84,86 @@ header{
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-
-    .menu-grid-title{
-        h1{
-            font-weight: 400;
-            text-transform: uppercase;
-        }
+    gap: 10px;
+    @media screen and (min-width: 800px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
-.menu-grid-case{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.grid-title{
+    h3{
+        padding: 0;
+        margin: 5px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+   
+}
+.menu-grid-bloc{
     background-color: white;
-    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    }
+
+.menu-case-dish{
+    margin-left: 15px;
+}
+.dish-and-price{
     width: 100%;
-    height: 70px;
-    .dish-and-price{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .price{
+        font-weight: bold;
+        padding-right: 10px;
     }
-    .dish-and-price-case{
-        white-space: nowrap;
-        margin-left: 10px;
+    .dish-and-price-title{
+        margin-top: -10px;
+    }
+    .dish-and-price-subtitle{
+        margin-top: -20px;
+        margin-bottom: -8px;
+    }
+}
+/*bouton commander*/
+.command{
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    .btn{
+        color: white;
+        background-image: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+        border: none;
+        padding: 16px 32px;
+        border-radius: 32px;
+        box-shadow: 2px 5px 13px -4px #000000;
     }
 }
 
-.dish-and-price-title{
-    font-weight: bold;
-}
+/*footer*/
+footer{
+    background: #353535;
+    padding: 5px 10px;
 
-.price{
-    font-weight: bold;
-    padding-left: 90px;
+    h4{
+        font-family: 'Shrikhand', sans-serif; 
+        color: white;
+        font-weight: 500;
+        padding: 5px 0;
+    }
+    p{
+        padding: 4px;
+        color: white;
+    }
+    i{
+        color: white;
+    }
+    a{
+        color: white;
+    }
 }

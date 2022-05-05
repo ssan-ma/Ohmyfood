@@ -58,6 +58,12 @@ header .logo {
   width: 53%;
   padding: 10px;
 }
+@media screen and (min-width: 800px) {
+  header .logo {
+    width: 18%;
+    padding: 24px;
+  }
+}
 
 /*ville*/
 .city {
@@ -106,6 +112,12 @@ header .logo {
   margin: 0;
 }
 
+@media screen and (min-width: 800px) {
+  .working__steps {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .working__step {
   display: flex;
   align-items: center;
@@ -116,6 +128,11 @@ header .logo {
   border-radius: 20px;
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 800px) {
+  .working__step {
+    margin: 20px 70px;
+  }
 }
 .working__step .working_number {
   background-color: #9356DC;
@@ -139,6 +156,14 @@ header .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media screen and (min-width: 800px) {
+  .restaurant {
+    margin: auto;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 35px;
+  }
 }
 .restaurant .new {
   position: relative;
@@ -166,6 +191,14 @@ header .logo {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr;
   grid-gap: 20px;
+}
+@media screen and (min-width: 800px) {
+  .restaurant-cards {
+    grid-gap: 100px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+  }
 }
 
 a {
@@ -211,16 +244,30 @@ a {
 .restaurant-block .restaurant-block-name {
   font-weight: 700;
 }
-.restaurant-block .restaurant-block-heart {
+
+.restaurant-block-heart {
   position: relative;
   left: 290px;
   bottom: 25px;
+}
+.restaurant-block-heart fa-thin fa-heart {
+  background-color: 1px solid black;
 }
 
 /*footer*/
 footer {
   background: #353535;
   padding: 5px 10px;
+  padding: 1px 80px;
+}
+@media screen and (min-width: 800px) {
+  footer {
+    padding-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+  }
 }
 footer h4 {
   font-family: "Shrikhand", sans-serif;
