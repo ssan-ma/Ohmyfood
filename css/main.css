@@ -1,51 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "Roboto" sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto" sans-serif;
 }
 
-/*loaders
-.loader{
-    height: 100%;
-    background: #ffffff;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index:2;
-    opacity: 0.9;
-    .loader-quart{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 10px solid #9356DC;
-        border-top: 10px solid #FF79DA;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        margin: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        animation: spin 2s linear infinite;
-    }
-    }
+/*loaders*/
+.loader {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+  animation: fade 2s;
+}
+.loader .loader-quart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #9356DC;
+  border-top: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spin 2s linear infinite;
+}
 
-@keyframes spin{
-    0%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-}*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 /*header*/
 header {
   display: flex;
@@ -123,7 +135,7 @@ header .logo {
   align-items: center;
   background: #f6f6f6;
   height: 60px;
-  width: 80%;
+  width: 88%;
   margin: 20px 25px;
   border-radius: 20px;
   position: relative;
@@ -258,7 +270,6 @@ a {
 footer {
   background: #353535;
   padding: 5px 10px;
-  padding: 1px 80px;
 }
 @media screen and (min-width: 800px) {
   footer {
@@ -267,10 +278,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    padding: 1px 80px;
   }
 }
 footer h4 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "shrikhand", sans-serif;
   color: white;
   font-weight: 500;
   padding: 5px 0;
