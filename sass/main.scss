@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto' sans-serif;
 }
 
 $color-primary: #9356DC;
@@ -25,6 +24,7 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 body{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto' sans-serif;
 }
 /*loaders*/
 .loader{
@@ -86,7 +86,6 @@ header{
     gap: 10px;
     padding: 4px;
     font-size: 50%;
-    font-family: 'Roboto' sans-serif;
 }
 .map{
     font-size: 17px;
@@ -207,6 +206,7 @@ header{
         align-self: center;
     }
 }
+
 a{
     text-decoration: none;
     color: white;
@@ -235,7 +235,28 @@ a{
     }
 }
 
+
+
 .restaurant-block{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 72px;
+    border-radius: 0 0 20px 20px;
+   
+    .restaurant-block-info{
+        color: black;
+        margin-left: 20px;
+    }
+
+    .restaurant-block-name{
+        font-weight: 700;
+    } 
+}
+
+.restaurant-block2{
     background: white;
     display: flex;
     justify-content: space-between;
@@ -251,7 +272,7 @@ a{
     .restaurant-block-name{
         font-weight: 700;
     } 
-}
+    }
 
 .restaurant-block-heart{
     position: relative;
