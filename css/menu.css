@@ -2,22 +2,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "roboto", sans-serif;
+  font-family: "roboto" sans-serif;
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto" sans-serif;
-  /*margin: 0px;
-  padding: 0px;
+}
+
+/*loaders*/
+.loader {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+  animation: fade 2s;
+}
+.loader .loader-quart {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  font-family: 'Roboto' sans-serif;*/
+  border: 10px solid #9356DC;
+  border-top: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spin 2s linear infinite;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 /*header*/
 header {
   display: flex;
@@ -80,7 +123,7 @@ header .logo {
   .grid {
     /* grid-template-columns: 1fr 1fr;
      grid-template-rows: 1fr 1fr;*/
-    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 20px;
   }
 }
 
@@ -143,8 +186,18 @@ footer {
   background: #353535;
   padding: 5px 10px;
 }
+@media screen and (min-width: 800px) {
+  footer {
+    padding-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 1px 80px;
+  }
+}
 footer h4 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "shrikhand", sans-serif;
   color: white;
   font-weight: 500;
   padding: 5px 0;
@@ -157,6 +210,7 @@ footer i {
   color: white;
 }
 footer a {
+  text-decoration: none;
   color: white;
 }
 
