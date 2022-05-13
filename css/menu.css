@@ -164,6 +164,10 @@ header .logo {
   margin-bottom: -8px;
 }
 
+.menu-check {
+  background-color: #99E2D0;
+}
+
 /*bouton commander*/
 .command {
   height: 130px;
