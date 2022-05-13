@@ -5,6 +5,22 @@
   font-family: "Roboto" sans-serif;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -22,7 +38,7 @@ body {
   right: 0;
   z-index: 2;
   visibility: hidden;
-  animation: fade 2s;
+  animation: fade 1s;
 }
 .loader .loader-quart {
   display: flex;
@@ -39,28 +55,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes fade {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
 /*header*/
 header {
   display: flex;
@@ -209,7 +206,7 @@ header .logo {
 }
 @media screen and (min-width: 800px) {
   .restaurant-cards {
-    grid-gap: 100px;
+    grid-gap: 133px;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     align-self: center;
@@ -227,7 +224,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  width: 135%;
+  width: 120%;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
@@ -264,6 +261,7 @@ a {
   position: relative;
   left: 290px;
   bottom: 25px;
+  font-size: 20px;
 }
 .restaurant-block-heart fa-thin fa-heart {
   background-color: 1px solid black;

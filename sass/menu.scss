@@ -12,6 +12,21 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 
+@keyframes spin{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+@keyframes fade{
+    0%{visibility: visible;}
+    100%{visibility:hidden;}
+}
+
+@keyframes appear{
+    0%{transform: scale(0)}
+    100%{transform: scale(1)}
+}
+
 body{
     margin: 0px;
     padding: 0px;
@@ -28,7 +43,7 @@ body{
     right: 0;
     z-index: 2;
     visibility: hidden;
-    animation: fade 2s;
+    animation: fade 1s;
     .loader-quart{
         display: flex;
         justify-content: center;
@@ -44,20 +59,9 @@ body{
         left: 0;
         right: 0;
         bottom: 0;
-        animation: spin 2s linear infinite ;
+        animation: spin 1s linear infinite ;
     }
     }
-
-@keyframes spin{
-    0%{transform: rotate(0deg); }
-    50%{transform: rotate(180);}
-    100%{transform: rotate(360deg);}
-}
-
-@keyframes fade{
-    0%{visibility: visible;}
-    100%{visibility:hidden;}
-}
 
 /*header*/
 header{
@@ -74,6 +78,21 @@ header{
             width: 18%;
             padding: 24px; 
         }
+    }
+    .arrow-back{
+        position: absolute;
+        left: 30px;
+        top: 22px;
+        font-size: 20px;
+
+        a{
+            color: black;
+        }
+        @media screen and (min-width: 800px){
+        left: 50px;
+        top: 30px;
+        font-size: 30px;
+      }
     }
 }
 
@@ -115,16 +134,17 @@ header{
 
 .menu-header-title{
     font-family: 'shrikhand';
+    }
 
-}
 
 .grid{
     display: grid;
     gap: 10px;
     @media screen and (min-width: 800px){
-       /* grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;*/
-        grid-auto-columns: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-auto-flow: column;
+        grid-gap: 30px;
     }
 }
 
@@ -134,6 +154,22 @@ header{
         margin: 5px;
         text-transform: uppercase;
         font-weight: 400;
+        @media screen and (min-width: 800px){
+            margin: 16px 0px;
+        }
+    }
+    :after{
+        content: '';
+        background-color: $color-tertiary;
+        width: 11%;
+        height: 4px;
+        position: absolute;
+        left: 26px;
+        display: flex;
+        @media screen and (min-width: 800px){
+            position: unset;
+            width: 14%;
+        }
     }
    
 }
@@ -143,11 +179,18 @@ header{
     align-items: center;
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    animation: appear 2s;
+    animation-fill-mode: both;
+    @media screen and (min-width: 800px){
+        margin-top: -13px;
     }
+}
 
 .menu-case-dish{
     margin-left: 15px;
 }
+
 .dish-and-price{
     width: 100%;
     display: flex;
@@ -167,12 +210,23 @@ header{
 }
 
 .menu-check{
-    background-color: $color-tertiary;
-    padding: 10px;
-    width: 17%;
-    height: 71%;
-    text-align: center;
+    background: $color-tertiary;
+    border-radius: 0 15px 15px 0;
+    padding: 0 13px;
+    height: 100%;
+    background-position: right;
+    i{
+        font-size: 30px;
+        color: white;
+        padding-top: 14px;
+        animation: spin 1s both;
+    }
 }
+.menu-check:hover{
+    background-position: right;
+}
+
+
 /*bouton commander*/
 .command{
     height: 130px;
@@ -180,6 +234,9 @@ header{
     align-items: center;
     justify-content: center;
     background-color: #f6f6f6;
+    @media screen and (min-width: 800px){
+       margin: 0 105px;
+    }
     .btn{
         color: white;
         background-image: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
@@ -189,7 +246,6 @@ header{
         box-shadow: 2px 5px 13px -4px #000000;
     }
 }
-
 /*footer*/
 footer{
     background: #353535;
