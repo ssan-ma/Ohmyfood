@@ -3,6 +3,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 $color-primary: #9356DC;
@@ -24,7 +25,6 @@ $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 1
 body{
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto' sans-serif;
 }
 /*loaders*/
 .loader{

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
-  font-family: "roboto" sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 @keyframes spin {

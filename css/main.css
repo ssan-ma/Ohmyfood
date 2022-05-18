@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 @keyframes spin {
@@ -23,7 +24,6 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Roboto" sans-serif;
 }
 
 /*loaders*/
