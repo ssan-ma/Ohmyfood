@@ -119,9 +119,6 @@ header .logo {
   max-width: 1200px;
   padding: 0;
 }
-.working .working_title {
-  margin: 0;
-}
 
 @media screen and (min-width: 800px) {
   .working__steps {
