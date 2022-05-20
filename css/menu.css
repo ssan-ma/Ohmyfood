@@ -23,10 +23,12 @@
 }
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 body {
@@ -131,9 +133,41 @@ header .arrow-back a {
 .menu .menu-header {
   flex-direction: row;
 }
+.menu .menu-header i {
+  font-size: 28px;
+  position: absolute;
+  right: 30px;
+  top: 330px;
+}
+@media screen and (min-width: 800px) {
+  .menu .menu-header i {
+    top: 50%;
+    left: 88%;
+  }
+}
+.menu .menu-header .fas {
+  color: transparent;
+  background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-clip: text;
+  opacity: 0;
+  cursor: pointer;
+}
+.menu .menu-header .fas:hover {
+  opacity: 1;
+}
 
 .menu-header-title {
   font-family: "shrikhand";
+}
+
+.grid-bloc {
+  display: grid;
+  grid-gap: 10px;
+}
+@media screen and (min-width: 800px) {
+  .grid-bloc {
+    grid-gap: 30px;
+  }
 }
 
 .grid {
@@ -143,7 +177,6 @@ header .arrow-back a {
 @media screen and (min-width: 800px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     grid-auto-flow: column;
     grid-gap: 30px;
   }
@@ -183,13 +216,69 @@ header .arrow-back a {
   border-radius: 15px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  animation: appear 2s;
+  animation: appear 1s;
   animation-fill-mode: both;
+  overflow: hidden;
+}
+.menu-grid-bloc:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu-grid-bloc:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu-grid-bloc:nth-child(4) {
+  animation-delay: 400ms;
 }
 @media screen and (min-width: 800px) {
   .menu-grid-bloc {
     margin-top: -13px;
   }
+}
+.menu-grid-bloc .menu-check-confirmation {
+  background-color: #99E2D0;
+  margin: -16px -62px -16px 4px;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 800px) {
+  .menu-grid-bloc .menu-check-confirmation {
+    margin: -16px -77px -16px 4px;
+    width: 20%;
+  }
+}
+.menu-grid-bloc .menu-check-confirmation .menu-item {
+  background-color: white;
+  height: 33px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-left: 10px;
+  transform: rotate(180deg);
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 800px) {
+  .menu-grid-bloc .menu-check-confirmation .menu-item {
+    height: 34px;
+    width: 54%;
+    margin-left: 16px;
+  }
+}
+.menu-grid-bloc .menu-check-confirmation .menu-item-icon {
+  color: #99E2D0;
+}
+.menu-grid-bloc:hover .menu-check-confirmation {
+  margin-right: -1px;
+}
+.menu-grid-bloc:hover .menu-item {
+  transform: rotate(0);
 }
 
 .menu-case-dish {
@@ -201,6 +290,7 @@ header .arrow-back a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .dish-and-price .price {
   font-weight: bold;
@@ -214,23 +304,6 @@ header .arrow-back a {
   margin-bottom: -8px;
 }
 
-.menu-check {
-  background: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  padding: 0 13px;
-  height: 100%;
-  background-position: right;
-}
-.menu-check i {
-  font-size: 30px;
-  color: white;
-  padding-top: 15px;
-  animation: spin 1s both;
-}
-
-/*.menu-check:hover{
-    background-position: right;
-}*/
 /*bouton commander*/
 .command {
   height: 130px;
@@ -251,6 +324,7 @@ header .arrow-back a {
   padding: 16px 32px;
   border-radius: 32px;
   box-shadow: 2px 5px 13px -4px #000000;
+  cursor: pointer;
 }
 
 /*footer*/
