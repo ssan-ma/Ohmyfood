@@ -44,8 +44,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 10px solid #9356DC;
-  border-top: 10px solid #FF79DA;
+  border: 10px solid #9356dc;
+  border-top: 10px solid #ff79da;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -141,7 +141,7 @@ header .logo {
   }
 }
 .working__step .working_number {
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   padding: 3px 8px 3px 8px;
   border-radius: 50%;
@@ -149,7 +149,7 @@ header .logo {
   left: -10px;
 }
 .working__step .working__icon {
-  color: #7E7E7E;
+  color: #7e7e7e;
   margin: 0 20px;
 }
 
@@ -197,7 +197,7 @@ header .logo {
   position: absolute;
   height: 34px;
   width: 27%;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: #1b6150;
   display: grid;
   place-items: center;
@@ -222,7 +222,8 @@ header .logo {
 .restaurant .card-description {
   position: relative;
 }
-.restaurant .card-description h4, .restaurant .card-description p {
+.restaurant .card-description h4,
+.restaurant .card-description p {
   padding-top: 2px;
   margin: 8px;
 }

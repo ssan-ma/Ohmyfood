@@ -2,271 +2,285 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 * {
-    box-sizing: border-box;
-    font-family: 'roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
 }
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-$gradientheart: linear-gradient(180deg, rgba(147,86,220,1) 0%,  rgba(255,121,218,1) 100%);
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 100%
+);
+$gradientheart: linear-gradient(
+  180deg,
+  rgba(147, 86, 220, 1) 0%,
+  rgba(255, 121, 218, 1) 100%
+);
 
-
-@keyframes spin{
-    0%{transform: rotate(0deg); }
-    100%{transform: rotate(360deg);}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes fade{
-    0%{visibility: visible;}
-    100%{visibility:hidden;}
+@keyframes fade {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
 
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
 /*loaders*/
-.loader{
-    height: 100%;
-    background: rgba(255, 255, 255, 0.9);
+.loader {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  visibility: hidden;
+  animation: fade 1s;
+  .loader-quart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #9356dc;
+    border-top: 10px solid #ff79da;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     margin: auto;
     position: fixed;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
-    visibility: hidden;
-    animation: fade 1s;
-    .loader-quart{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 10px solid #9356DC;
-        border-top: 10px solid #FF79DA;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin: auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        animation: spin 1s linear infinite ;
-    }
-    }
+    bottom: 0;
+    animation: spin 1s linear infinite;
+  }
+}
 /*header*/
-header{
-    display: flex;
-    box-shadow: 0px 3px 1px lightgrey;
-    position: relative;
+header {
+  display: flex;
+  box-shadow: 0px 3px 1px lightgrey;
+  position: relative;
 
-    .logo{
-        margin: auto;
-        margin-top: 7px;
-        width: 53%;
-        padding: 10px; 
-        @media screen and (min-width: 800px){
-            width: 18%;
-            padding: 24px; 
-        }
-    } 
+  .logo {
+    margin: auto;
+    margin-top: 7px;
+    width: 53%;
+    padding: 10px;
+    @media screen and (min-width: 800px) {
+      width: 18%;
+      padding: 24px;
+    }
+  }
 }
 
 /*ville*/
-.city{
-    display: flex;
-    background-color: #f1eeee;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 10px;
-    padding: 4px;
-    font-size: 8px;
-    .map{
-        font-size: 17px;
-    }
+.city {
+  display: flex;
+  background-color: #f1eeee;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+  padding: 4px;
+  font-size: 8px;
+  .map {
+    font-size: 17px;
+  }
 }
 
 /*explorer*/
-.Explorer{
-    text-align: center;
-    margin: auto;
-    padding: 10px 5px 35px 5px;
-    background-color: #fafafa;
-    .btn{
-        color: white;
-        background-image: ($gradient);
-        border: none;
-        padding: 16px 32px;
-        border-radius: 32px;
-        box-shadow: 2px 5px 13px -4px #000000;
-    }
+.Explorer {
+  text-align: center;
+  margin: auto;
+  padding: 10px 5px 35px 5px;
+  background-color: #fafafa;
+  .btn {
+    color: white;
+    background-image: ($gradient);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 32px;
+    box-shadow: 2px 5px 13px -4px #000000;
+  }
 }
 
 /*fonctionnement*/
-.working{
-    display: flex;
-    justify-content: center;
-   
-    .container{
-        width: 95%;
-        max-width: 1200px;
-        padding: 0;
-    }
+.working {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 95%;
+    max-width: 1200px;
+    padding: 0;
+  }
 }
-@media screen and (min-width: 800px){
-    .working__steps{
+@media screen and (min-width: 800px) {
+  .working__steps {
     display: flex;
     flex-direction: row;
-    }
+  }
 }
 
-.working__step{
-    display: flex;
-    align-items: center;
-    background: #f6f6f6;
-    height: 60px;
-    width: 88%;
-    margin: 20px 25px;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-    @media screen and (min-width: 800px){
-        margin: 20px 70px;
-    }
-    .working_number{
-        background-color: $color-primary;
-        color: white;
-        padding: 3px 8px 3px 8px;
-        border-radius: 50%;
-        position: absolute;
-        left: -10px;
-    }
+.working__step {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: 60px;
+  width: 88%;
+  margin: 20px 25px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  @media screen and (min-width: 800px) {
+    margin: 20px 70px;
+  }
+  .working_number {
+    background-color: $color-primary;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+  }
 
-    .working__icon{
-        color: #7E7E7E;
-        margin: 0 20px;
-    }
+  .working__icon {
+    color: #7e7e7e;
+    margin: 0 20px;
+  }
 }
 
 /*restaurants*/
-.restaurant{
-    background-color: #f6f6f6;
-    padding: 0 10px;
-    a{
-        text-decoration: none;
-        color: inherit;
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 0 10px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h3 {
+    padding: 13px 0px 0px 23px;
+    @media screen and (min-width: 800px) {
+      padding: 19px 9px;
+      margin-left: 336px;
     }
-    h3{
-        padding: 13px 0px 0px 23px;
-        @media screen and (min-width: 800px){
-        padding: 19px 9px;
-        margin-left: 336px;
-        }
+  }
+  .restaurant-block {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    height: 1200px;
+    width: 95%;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    @media screen and (min-width: 800px) {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      height: 650px;
+      width: 54%;
+      margin-left: 312px;
     }
-    .restaurant-block{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr); 
-        grid-gap: 20px;
-        height: 1200px;
-        width: 95%;
-        padding-left: 20px;
-        padding-bottom: 30px;
-        @media screen and (min-width: 800px){
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-            height: 650px;
-            width: 54%;
-            margin-left: 312px;
-        }
-        .new{
-            position: relative;
-        }
-        .new::before{
-            content: 'Nouveau';
-            position: absolute;
-            height: 34px;
-            width: 27%;
-            background-color: $color-tertiary;
-            color: darken($color: $color-tertiary, $amount: 50%);
-            display: grid;
-            place-items: center;
-            top: 15px;
-            right: 15px;
-           
-
-        }
+    .new {
+      position: relative;
     }
-    .restaurant-card{
-        height: 270px;
-        border-radius: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    .new::before {
+      content: 'Nouveau';
+      position: absolute;
+      height: 34px;
+      width: 27%;
+      background-color: $color-tertiary;
+      color: darken($color: $color-tertiary, $amount: 50%);
+      display: grid;
+      place-items: center;
+      top: 15px;
+      right: 15px;
     }
-    .card-image{
-        width: 100%;
-        height: 190px;
-        img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            border-radius:  20px 20px 0 0;
-        }
+  }
+  .restaurant-card {
+    height: 270px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  }
+  .card-image {
+    width: 100%;
+    height: 190px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px 20px 0 0;
     }
-    .card-description{
-        position: relative;
-        h4,p{
-            padding-top: 2px;
-            margin: 8px;
-        }
-        i{
-            font-size: 28px;
-            position: absolute;
-            right: 30px;
-            top: 15px;
-        }
-        .fas{
-            color: transparent;
-            background-image: $gradientheart;
-            background-clip: text;
-            opacity: 0;
-            &:hover{
-                opacity: 1;
-            }
-        }
+  }
+  .card-description {
+    position: relative;
+    h4,
+    p {
+      padding-top: 2px;
+      margin: 8px;
     }
+    i {
+      font-size: 28px;
+      position: absolute;
+      right: 30px;
+      top: 15px;
+    }
+    .fas {
+      color: transparent;
+      background-image: $gradientheart;
+      background-clip: text;
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 /*FOOTER*/
-footer{
-    background: #353535;
-    padding: 5px 10px;
-    @media screen and (min-width: 800px){
-        padding-top: 1px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100px;
-        padding: 1px 80px;
-        }
-        h5{
-            font-family: 'shrikhand', sans-serif; 
-            color: white;
-            font-weight: 500;
-            padding: 5px 0;
-        }
-        p{
-            padding: 4px;
-            color: white;
-        }
-        i{
-            color: white;
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-    }
+footer {
+  background: #353535;
+  padding: 5px 10px;
+  @media screen and (min-width: 800px) {
+    padding-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 1px 80px;
+  }
+  h5 {
+    font-family: 'shrikhand', sans-serif;
+    color: white;
+    font-weight: 500;
+    padding: 5px 0;
+  }
+  p {
+    padding: 4px;
+    color: white;
+  }
+  i {
+    color: white;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
