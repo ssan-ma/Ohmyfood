@@ -136,12 +136,6 @@ header .logo {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
-.working__stephover {
-  opacity: 0.8;
-  transition: 0.3s;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  background: #9356dc;
-}
 @media screen and (min-width: 800px) {
   .working__step {
     margin: 20px 70px;
