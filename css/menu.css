@@ -137,7 +137,7 @@ header .arrow-back a {
   font-size: 28px;
   position: absolute;
   right: 30px;
-  top: 330px;
+  top: 362px;
 }
 @media screen and (min-width: 800px) {
   .menu .menu-header i {
@@ -149,6 +149,7 @@ header .arrow-back a {
   color: transparent;
   background-image: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   background-clip: text;
+  -webkit-background-clip: text;
   opacity: 0;
   cursor: pointer;
 }
@@ -236,7 +237,7 @@ header .arrow-back a {
 }
 .menu-grid-bloc .menu-check-confirmation {
   background-color: #99E2D0;
-  margin: -16px -62px -16px 4px;
+  margin: -16px -70px -16px 4px;
   width: 15%;
   height: 100%;
   display: flex;
@@ -262,7 +263,9 @@ header .arrow-back a {
   border-radius: 100%;
   margin-left: 10px;
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transition-duration: 0.5s;
+  -webkit-animation: rotate 0.5s;
 }
 @media screen and (min-width: 800px) {
   .menu-grid-bloc .menu-check-confirmation .menu-item {
