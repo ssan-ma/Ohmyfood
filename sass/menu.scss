@@ -13,6 +13,15 @@ $color-tertiary: #99E2D0;
 $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 $gradientheart: linear-gradient(180deg, rgba(147,86,220,1) 0%,  rgba(255,121,218,1) 100%);
 
+@mixin btn-hover {
+    opacity: 0.8;
+      cursor: pointer;
+      -webkit-transition: .3s;
+      transition: .3s;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  }
+
 @keyframes spin{
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
@@ -312,7 +321,9 @@ header{
         padding: 16px 32px;
         border-radius: 32px;
         box-shadow: 2px 5px 13px -4px #000000;
-        cursor: pointer;
+        &:hover{
+            @include btn-hover;
+        }
     }
 }
 /*footer*/

@@ -106,6 +106,14 @@ header .logo {
   border-radius: 32px;
   box-shadow: 2px 5px 13px -4px #000000;
 }
+.Explorer .btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+}
 
 /*fonctionnement*/
 .working {
@@ -134,7 +142,15 @@ header .logo {
   border-radius: 20px;
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+}
+.working__step:hover {
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  background: #e4d5f6;
 }
 @media screen and (min-width: 800px) {
   .working__step {

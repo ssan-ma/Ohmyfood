@@ -327,7 +327,14 @@ header .arrow-back a {
   padding: 16px 32px;
   border-radius: 32px;
   box-shadow: 2px 5px 13px -4px #000000;
+}
+.command .btn:hover {
+  opacity: 0.8;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0);
 }
 
 /*footer*/
